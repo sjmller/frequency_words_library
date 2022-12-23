@@ -21,4 +21,4 @@ jobs:
         pipenv install --system --dev
     - name: Analysing the code with pylint
       run: |
-        pylint --fail-under 8 $(git ls-files -- '*.py' ':!:test_*.py')
+        pylint --fail-under 8 $(git ls-files -- ':!:tests/*' '*.py')
